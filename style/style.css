@@ -635,13 +635,3 @@ body {
             fill: rgb(187, 187, 218);
         }
     }
-
-/* CSS 파일의 가장 아래에 추가 */
-@media (max-width: 768px) {
-    .profile-card {
-        display: none !important; /* !important로 강제 적용 */
-    }
-    .section {
-        height: 80vh !important; /* !important로 강제 적용 */
-    }
-}

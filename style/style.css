@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    color: #333;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding-top: 90px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(193, 193, 223);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.header.transparent {
+    background-color: rgba(193, 193, 223, 0.6);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.logo:hover {
+    color: #555;
+}
+
+.menu {
+    background-color: lavender;
+    border-radius: 15px;
+    padding: 0 15px;
+    margin-right: 15px;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li {
+    margin: 12px;
+    list-style: none;
+    padding: 15px;
+    transition: 0.3s all;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu li:hover {
+    background-color: rgb(193, 193, 223);
+    color: white;
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+    height: 100vh;
+}
+
+.section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about {
+    background-color: white;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(193, 193, 223);
+    border-radius: 15px;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#animate-text {
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif; 
+    white-space: pre-line;
+    line-height: 1.6; 
+}
+
+.about .information h3{
+    font-weight:lighter;
+    color:darkgray;
+    font-size: 22px;
+}
+.about .information h3 a{
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
+.about .information h3 a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.about .about-wrap {
+    width: 60%;
+    border-radius: 15px;
+    border: 2px solid rgb(193, 193, 223);
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-end;
+}
+
+.about .myPhoto img {
+    width: 240px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 60px;
+}
+
+.about .myInfo {
+    padding: 20px;
+}
+
+.about h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.about .myInfo ul li {
+    padding: 10px;
+    display: flex;
+}
+
+.about .myInfo ul li svg {
+    margin-right: 20px;
+}
+
+.about .myInfo ul li svg {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about .myInfo ul li a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+.about .myInfo ul li a:visited {
+    color: purple;
+}
+
+.about .myInfo ul li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.skills, .projects, .experience {
+    background-color: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(193, 193, 223);
+    border-radius: 15px;
+}
+
+.skills h2, .projects h2, .experience h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.skills p, .projects p, .experience p {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(193, 193, 223);
+    max-width: 600px;
+}
+
+.skills-container {
+    width: 80%;
+    text-align: left;
+}
+
+.skills-container h3 {
+    text-align: center;
+}
+
+.skill-section.upper {
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(193, 193, 223);
+}
+
+.skill-section.middle {
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(193, 193, 223);
+}
+
+.skill-section.lower {
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(193, 193, 223);
+}
+
+.skill-section.upper .skill-level {
+    background: linear-gradient(to right, white, lightblue);
+}
+
+.skill-section.middle .skill-level {
+    background: linear-gradient(to right, white, lightgrey);
+}
+
+.skill-section.lower .skill-level {
+    background: linear-gradient(to right, white, lightpink);
+}
+
+.skill-section.upper .skill-bar {
+    border: 1px solid lightblue;
+}
+
+.skill-section.middle .skill-bar {
+    border: 1px solid lightgrey;
+}
+
+.skill-section.lower .skill-bar {
+    border: 1px solid lightpink;
+}
+.skill-section.upper .skill-level:hover {
+    background: linear-gradient(to right, white, #83b7c9); 
+}
+.skill-section.middle .skill-level:hover {
+    background: linear-gradient(to right, white, #a5a5a5);
+}
+.skill-section.lower .skill-level:hover {
+    background: linear-gradient(to right, white, #f08695);
+}
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    text-align: center;
+    flex: 0.7;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight:lighter;
+}
+.skill-name:hover{
+    font-weight:bold;
+}
+.skill-bar {
+    flex: 3.5;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 15px;
+}
+.skill-bar:hover{
+    height: 18px;
+}
+.skill-level {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 2s ease-in-out;
+    background-position: 0 0;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, white, lightblue);
+    width: 0; /* 초기 상태 */
+    animation: fillSkillBar 2s ease forwards; 
+}
+
+@keyframes fillSkillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-level-width);
+    }
+}
+
+
+
+.profile-card {
+    position: fixed;
+    top: 120px;
+    right: 55px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(193, 193, 223);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+    width: 200px;
+    height: 300px;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.profile-card.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 2000;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card.active img {
+    width: 200px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.profile-card.active h3,
+.profile-card.active p {
+    font-size: 24px; 
+    margin-bottom: 20px;
+}
+
+.profile-card .profile-details {
+    display: none; 
+    margin-top: 10px; 
+    text-align: left; 
+}
+
+.profile-card.active .profile-details {
+    display: block;
+    font-size: 16px;
+}
+
+.projects {
+    background-color: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(193, 193, 223);
+    border-radius: 15px;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    perspective: 1000px;
+    justify-items: center;
+}
+
+.project {
+    background-color: white;
+    border: 2px solid rgb(193, 193, 223);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+    position: relative;
+    width: 80%;
+    height: 240px;
+    transform-style: preserve-3d;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project.flipped {
+    transform: rotateY(180deg);
+}
+
+.project .front,
+.project .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+.project .back .description {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(193, 193, 223);
+    height: 160px;
+    width: 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    text-align: left;
+    flex-direction: column;
+}
+
+.project .back .description .font{
+    font-size: 12px;
+}
+.project .back .description h3{
+    font-size: 18px;
+    color: rgb(108, 32, 179);
+}
+.project .back .description h4{
+    font-size: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.project .front {
+    background-color: white;
+}
+.project .front img{
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+}
+.project .back {
+    display: flex;
+    transform: rotateY(180deg);
+    background-color: white;
+    border: 2px solid rgb(193, 193, 223);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+}
+.project .back .back-wrap{
+    justify-content: space-around;
+}
+.project .back .back-wrap .btn {
+    border: 2px solid rgb(193, 193, 223);
+    background-color: rgb(193, 193, 223);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.project .back .back-wrap .gitbtn {
+    border: 2px solid rgb(193, 193, 223);
+    background-color: white;
+    color: rgb(193, 193, 223);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.project .back .back-wrap .btn:hover {
+    background-color: white;
+    color: rgb(193, 193, 223);
+}
+.project .back .back-wrap .gitbtn:hover {
+    background-color: rgb(193, 193, 223);
+    color: white;
+}
+.experience table {
+    width: 80%;
+    height: 80%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.experience th, .experience td {
+    padding: 12px;
+    border: 1px solid rgb(103, 103, 143);
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: relative;
+}
+
+.experience th {
+    background-color: rgb(154, 154, 192);
+}
+
+.experience tbody tr:nth-child(even) {
+    background-color: lavender;
+}
+
+.experience tbody tr:hover {
+    background-color: #d8d8d8;
+}
+
+.experience tbody tr:nth-child(even):hover {
+    background-color: rgb(187, 187, 218);
+}
+
+.experience td button {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    padding: 8px 12px;
+    background-color: rgb(103, 103, 143);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.experience td:hover button {
+    opacity: 1; 
+}
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        .footer-inner {
+            background-color: rgb(187, 187, 218);
+
+            .container {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                height: 80px;
+                padding: 20px;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+        .custom-shape-divider-bottom-1656519457 {
+            position: absolute;
+            bottom: 78px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1656519457 svg {
+            position: relative;
+            display: block;
+            width: calc(114% + 1.3px);
+            height: 60px;
+        }
+
+        .custom-shape-divider-bottom-1656519457 .shape-fill {
+            fill: rgb(187, 187, 218);
+        }
+    }
+
+@media (max-width: 768px) {
+    .profile-card {
+        display: none;
+    }
+    .section{
+        height: 80vh;
+    }
+}

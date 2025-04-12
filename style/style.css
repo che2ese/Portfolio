@@ -641,7 +641,7 @@ body {
     }
 
 /* 프로필 카드 모바일 대응 */
-@media (max-width: 960px) {
+@media (max-width: 768px) {
     /* 1. 사진 숨기기 */
     .about .myPhoto {
         display: none;

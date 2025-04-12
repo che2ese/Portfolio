@@ -115,28 +115,3 @@ function toggleProfileCard() {
     var profileCard = document.querySelector('.profile-card');
     profileCard.classList.toggle('active');
 }
-
-// Ctrl + 마우스휠 줌 방지
-window.addEventListener('wheel', function (e) {
-    if (e.ctrlKey || e.metaKey) {
-        e.preventDefault();
-    }
-}, { passive: false });
-
-// Ctrl or Command + 줌 단축키 막기
-window.addEventListener('keydown', function (e) {
-    if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
-        e.preventDefault();
-    }
-});
-
-// 맥북 트랙패드 줌 제스처 막기
-window.addEventListener('gesturestart', function (e) {
-    e.preventDefault();
-});
-window.addEventListener('gesturechange', function (e) {
-    e.preventDefault();
-});
-window.addEventListener('gestureend', function (e) {
-    e.preventDefault();
-});

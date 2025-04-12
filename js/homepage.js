@@ -110,6 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
         profileCard.style.display = 'flex';
     }
 });
+// === 줌 방지 코드 (데스크탑 확대/축소 제어) ===
+window.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+window.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=')) {
+        e.preventDefault();
+    }
+});
 function toggleProfileCard() {
     var profileCard = document.querySelector('.profile-card');
     profileCard.classList.toggle('active');

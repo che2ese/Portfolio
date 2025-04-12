@@ -734,10 +734,12 @@ body {
     }
 
     .project .back .btn {
-        font-size: 5px;
+        font-size: 7px;
+        padding: 2px 4px;
     }
     
     .project .back .gitbtn {
-        font-size: 5px;
+        font-size: 12px;
+        padding: 2px 4px;
     }
 }

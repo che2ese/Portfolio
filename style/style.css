@@ -641,12 +641,41 @@ body {
     }
 
 /* 프로필 카드 모바일 대응 */
-@media (max-width: 768px) {
-    .profile-card {
+@media (max-width: 960px) {
+    /* 1. 사진 숨기기 */
+    .about .myPhoto {
         display: none;
     }
-    .section {
-        height: auto;
-        padding: 40px 0;
+
+    /* 2. 콘텐츠 전체를 세로 정렬하고 중앙 정렬 */
+    .about .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 3. 텍스트 영역 내부 여백 줄이기 */
+    .about .myInfo {
+        padding: 0;
+    }
+
+    /* 4. 리스트 텍스트 중앙 정렬 및 반응형 대응 */
+    .about .myInfo ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .about .myInfo ul li {
+        justify-content: center;
+        font-size: 14px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    /* 5. 위쪽 정보 문단 중앙 정렬 */
+    .about .information h3 {
+        text-align: center;
+        font-size: 16px;
+        padding: 0 12px;
     }
 }

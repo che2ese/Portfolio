@@ -642,22 +642,26 @@ body {
 
 /* 프로필 카드 모바일 대응 */
 @media (max-width: 960px) {
-    /* 1. 사진 숨기기 */
-    .about .myPhoto {
+    .profile-card {
         display: none;
     }
-
-    /* 2. 콘텐츠 전체를 세로 정렬하고 중앙 정렬 */
+    
     .about .about-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-
-    /* 3. 텍스트 영역 내부 여백 줄이기 */
-    .about .myInfo {
+      }
+    
+      .about .myPhoto img {
+        width: 150px;
+        height: auto;
+        margin: 0 0 20px 0;
+      }
+    
+      .about .myInfo {
         padding: 0;
-    }
+        margin: 0;
+      }
 
     /* 4. 리스트 텍스트 중앙 정렬 및 반응형 대응 */
     .about .myInfo ul {

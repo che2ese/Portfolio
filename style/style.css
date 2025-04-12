@@ -645,7 +645,7 @@ body {
     .profile-card {
         display: none;
     }
-    
+
     .about .about-content {
         flex-direction: column;
         align-items: center;
@@ -734,12 +734,10 @@ body {
     }
 
     .project .back .btn {
-        font-size: 10px;
-        padding: 2px 4px;
+        font-size: 5px;
     }
     
     .project .back .gitbtn {
-        font-size: 10px;
-        padding: 2px 4px;
+        font-size: 5px;
     }
 }

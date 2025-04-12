@@ -731,11 +731,11 @@ body {
 
     .project .back .btn {
         font-size: 10px;
-        padding: 6px 12px;
+        padding: 2px 4px;
     }
     
     .project .back .gitbtn {
         font-size: 10px;
-        padding: 6px 12px;
+        padding: 2px 4px;
     }
 }
